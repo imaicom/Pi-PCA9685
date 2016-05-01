@@ -39,10 +39,10 @@ int main() {
 	
 	fd = wiringPiI2CSetup(0x40);	// PCA9685
 	resetPCA9685(fd);
-	setPCA9685Freq(fd,50);
+	setPCA9685Freq(fd,50);	// 50Hz cycle
 
 	for(i = 0; i < 16; i++) {
-		setPCA9685Duty(fd , i , 0 , 276);	// off timing 143(3.5%)~276(center)~410(10%)
+		setPCA9685Duty(fd , i , 0 , 276);	// PWM off timing 143(3.5%)~276(center)~410(10%)
 	};
 
 	return(0);
