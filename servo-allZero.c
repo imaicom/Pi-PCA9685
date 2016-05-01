@@ -26,7 +26,6 @@ int setPCA9685Freq(int fd , float freq) {
 	wiringPiI2CWriteReg8(fd , 0x00 , oldmode | 0xA1);
 }
 
-
 int setPCA9685Duty(int fd , int channel , int on , int off) {
 	int channelpos;
 	channelpos = 0x6 + 4 * channel;
