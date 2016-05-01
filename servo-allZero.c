@@ -42,7 +42,7 @@ int main() {
 	setPCA9685Freq(fd,50);
 
 	for(i = 0; i < 16; i++) {
-		setPCA9685Duty(fd , i , 0 , 276);
+		setPCA9685Duty(fd , i , 0 , 276);	// off timing 143(3.5%)~276(center)~410(10%)
 	};
 
 	return(0);
