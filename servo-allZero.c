@@ -34,15 +34,29 @@ int setPCA9685Duty(int fd , int channel , int on , int off) {
 }
 
 int main() {
-	int fd,i;
+	int fd,i,j;
 	
 	fd = wiringPiI2CSetup(0x40);	// PCA9685
 	resetPCA9685(fd);
 	setPCA9685Freq(fd,50);	// 50Hz cycle
 
-	for(i = 0; i < 16; i++) {
-		setPCA9685Duty(fd , i , 0 , 276);	// PWM off timing 143(3.5%)~276(center)~410(10%)
+	while(1){
+		for(i = 0; i < 16; i++) {
+			setPCA9685Duty(fd , i , 0 , 143);	// PWM off timing 143(3.5%)~276(center)~410(10%)
+		};
+		delay(500);
+		for(i = 0; i < 16; i++) {
+			setPCA9685Duty(fd , i , 0 , 276);	// PWM off timing 143(3.5%)~276(center)~410(10%)
+		};
+		delay(500);
+		for(i = 0; i < 16; i++) {
+			setPCA9685Duty(fd , i , 0 , 410);	// PWM off timing 143(3.5%)~276(center)~410(10%)
+		};
+		delay(500);
+		for(i = 0; i < 16; i++) {
+			setPCA9685Duty(fd , i , 0 , 276);	// PWM off timing 143(3.5%)~276(center)~410(10%)
+		};
+		delay(500);		
 	};
-
 	return(0);
 }
