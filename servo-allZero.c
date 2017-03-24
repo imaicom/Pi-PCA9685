@@ -42,19 +42,19 @@ int main() {
 
 	while(1){
 		for(i = 0; i < 16; i++) {
-			setPCA9685Duty(fd , i , 0 , 143);	// PWM off timing 143(3.5%)~276(center)~410(10%)
+			setPCA9685Duty(fd , i , 0 , 143);	// PWM off timing 143(3.5%)~276(center)~410(100%)
 		};
 		delay(500);
 		for(i = 0; i < 16; i++) {
-			setPCA9685Duty(fd , i , 0 , 276);	// PWM off timing 143(3.5%)~276(center)~410(10%)
+			setPCA9685Duty(fd , i , 0 , 276);	// PWM off timing 143(3.5%)~276(center)~410(100%)
 		};
 		delay(500);
 		for(i = 0; i < 16; i++) {
-			setPCA9685Duty(fd , i , 0 , 410);	// PWM off timing 143(3.5%)~276(center)~410(10%)
+			setPCA9685Duty(fd , i , 0 , 410);	// PWM off timing 143(3.5%)~276(center)~410(100%)
 		};
 		delay(500);
 		for(i = 0; i < 16; i++) {
-			setPCA9685Duty(fd , i , 0 , 276);	// PWM off timing 143(3.5%)~276(center)~410(10%)
+			setPCA9685Duty(fd , i , 0 , 276);	// PWM off timing 143(3.5%)~276(center)~410(100%)
 		};
 		delay(500);		
 	};
