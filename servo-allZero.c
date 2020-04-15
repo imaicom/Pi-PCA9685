@@ -1,6 +1,6 @@
 // sudo raspi-conig
 // sudo apt-get install i2c-tools
-// sudo i2cdetect -y 1
+// sudo i2cdetect -y 1 
 // cc -o servo-allZero servo-allZero.c -lwiringPi -lm
 #include <stdio.h>
 #include <wiringPi.h>
